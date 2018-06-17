@@ -1,12 +1,25 @@
-import React, { Component } from 'react';
-import PlanetSelector from './PlanetSelector.js';
+  import React, { Component } from 'react';
+  import PlanetSelector from './PlanetSelector.js';
 
-class PlanetBox extends Component {
-  render() {
-    return (
-      <PlanetSelector />
-    );
-}
-}
+  const PlanetBox = (props) => {
 
-export default PlanetBox;
+
+    const options = props.planets.map((planet, index) =>{
+      return <option value={index} key={index}>{planet.name}</option>
+
+
+    })
+
+      return (
+        <div>
+        <select>
+          <option>Choose a planet...</option>
+          {options}
+        </select>
+        <PlanetSelector />
+        </div>
+      );
+  }
+
+
+  export default PlanetBox;
