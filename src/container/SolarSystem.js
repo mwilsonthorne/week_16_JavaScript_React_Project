@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PlanetBox from '../component/PlanetBox.js';
 
 class SolarSystem extends Component {
   render() {
     return (
-      <div className="solar-system">
-        Hello World! I am a solar system
-      </div>
-
+        <PlanetBox />
     );
   }
 }
