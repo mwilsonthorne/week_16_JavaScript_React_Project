@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import PlanetSelector from './PlanetSelector.js';
 
 class PlanetBox extends Component {
   render() {
     return (
-      <div className="planet-box">
-        Hello World! I am a PlanetBox!
-      </div>
+      <PlanetSelector />
     );
 }
 }
