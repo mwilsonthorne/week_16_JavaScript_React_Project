@@ -5,15 +5,21 @@
 
 
     const options = props.planets.map((planet, index) =>{
-      return <div key={index}> {planet.name} </div>
+      return (
+        <div key={index}>
+          <h2> {planet.name} </h2>
+          <img src={require('/one.jpeg')} />
+        </div>
+
+      )
+
 
     })
 
       return (
-        <div>
-          {options}
-        <PlanetSelector />
-        </div>
+        <div> {options} </div>
+        // <PlanetSelector />
+
       );
   }
 
