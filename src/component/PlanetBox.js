@@ -5,11 +5,11 @@
 
 
     const planetInfo = props.planets.map((planet, index) =>{
-    const imgId = `../images/${planet.id}.jpeg`
+      const imgID =  `/images/${planet.id}.jpg`
       return (
         <div key={index}>
           <h2> {planet.name} </h2>
-          <img src={imgId}/>
+          <img src={window.location.origin + imgID} alt={planet.name}/>
         </div>
 
       )
