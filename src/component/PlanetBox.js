@@ -4,11 +4,12 @@
   const PlanetBox = (props) => {
 
 
-    const options = props.planets.map((planet, index) =>{
+    const planetInfo = props.planets.map((planet, index) =>{
+    const imgId = `../images/${planet.id}.jpeg`
       return (
         <div key={index}>
           <h2> {planet.name} </h2>
-          <img src={require('/one.jpeg')} />
+          <img src={imgId}/>
         </div>
 
       )
@@ -17,7 +18,7 @@
     })
 
       return (
-        <div> {options} </div>
+        <div> {planetInfo} </div>
         // <PlanetSelector />
 
       );
