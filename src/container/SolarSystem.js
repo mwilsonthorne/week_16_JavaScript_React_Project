@@ -11,6 +11,8 @@ class SolarSystem extends Component {
 
     }
 
+    this.handlePlanetSelected = this.handlePlanetSelected.bind(this);
+
   }
 
   componentDidMount(){
@@ -21,14 +23,20 @@ class SolarSystem extends Component {
      .catch(error => console.log("Error:", error))
  }
 
-
+handlePlanetSelected(index){
+  const selectedPlanet = this.state.planets[index]
+  this.setState ( {currentPlanet: selectedPlanet} )
+  console.log("Button Clicked");
+}
 
   render() {
     return (
       <div>
         <h1>Our Solar System</h1>
         <PlanetBox
-          planets={this.state.planets}/>
+          planets={this.state.planets}
+          onPlanetSelected={this.handlePlanetSelected}
+        />
         </div>
     );
   }
