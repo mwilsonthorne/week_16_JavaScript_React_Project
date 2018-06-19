@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class PlanetData extends Component {
-  render() {
+const PlanetData = (props) => {
+  if(!props.planet) return null
+
+
+
+
+
     return (
       <div className="planet-data">
-        Hello World! I am the bottom of the hierarchy!
+        <h3>{props.planet.name}</h3>
+        <h3>{props.planet.gravity}</h3>
       </div>
     );
-  }
+
 }
 
 export default PlanetData;
