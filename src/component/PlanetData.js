@@ -1,8 +1,13 @@
 import React from 'react';
+import { Player, ControlBar } from 'video-react';
+import "../../node_modules/video-react/dist/video-react.css";
+
+
 
 
 const PlanetData = (props) => {
   if(!props.planet) return null
+
 
   function handleReturn(event){
     props.onReturnSelected();
@@ -21,8 +26,15 @@ const PlanetData = (props) => {
         <h3>Distance from the Sun: {props.planet.distance_from_sun} million km</h3>
         <h3>Temperature: {props.planet.mean_temperature} degrees Celsius</h3>
         <h3>Moons: {props.planet.number_of_moons}</h3>
+
         <button onClick={handleReturn} type ="submit"> Return to Solar System </button>
+
+        <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" className="contol-bar" >
+             <ControlBar autoHide={false}/>
+        </Player>
+
       </div>
+
     );
 
 }

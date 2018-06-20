@@ -8,3 +8,13 @@ body {
   height: 100px;
   width: 100px;
 }
+
+.video-detail{
+  width: 500px;
+  height: 350px;
+}
+
+.control-bar{
+  width: 100px;
+  height: 150px;
+}
