@@ -6,13 +6,12 @@ body {
 }
 
 .title {
-
-
+  display: flex;
+  flex-wrap: wrap;
   color: white;
 }
 
 .planet {
-  display: flex;
   margin: 10px;
   padding: 20px;
 
