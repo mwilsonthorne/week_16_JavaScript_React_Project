@@ -4,6 +4,10 @@ import React from 'react';
 const PlanetData = (props) => {
   if(!props.planet) return null
 
+  function handleReturn(event){
+    props.onReturnSelected();
+  }
+
     return (
       <div className="planet-data">
         <h3>Planet Name: {props.planet.name}</h3>
@@ -17,6 +21,7 @@ const PlanetData = (props) => {
         <h3>Distance from the Sun: {props.planet.distance_from_sun} million km</h3>
         <h3>Temperature: {props.planet.mean_temperature} degrees Celsius</h3>
         <h3>Moons: {props.planet.number_of_moons}</h3>
+        <button onClick={handleReturn} type ="submit"> Return to Solar System </button>
       </div>
     );
 

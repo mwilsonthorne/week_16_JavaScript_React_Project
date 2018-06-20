@@ -14,14 +14,14 @@ const PlanetBox = (props) => {
     }
 
     return (
-      <div key={index} value={planet.id} onClick={handleChange}>
+      <div key={index} value={planet.id} onClick={handleChange} className="planet">
         <h2> {planet.name} </h2>
         <img src={window.location.origin + imgID} alt={planet.name} className="planetImage"/>
       </div>
     )
 
   })
-  
+
   return (
     <div>
       {planetInfo}

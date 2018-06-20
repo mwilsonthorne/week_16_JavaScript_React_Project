@@ -14,6 +14,7 @@ class SolarSystem extends Component {
     }
 
     this.handlePlanetSelected = this.handlePlanetSelected.bind(this);
+    this.handleReturnSelected = this.handleReturnSelected.bind(this);
 
   }
 
@@ -33,18 +34,28 @@ class SolarSystem extends Component {
     // console.log(selectedPlanet);
   }
 
+  handleReturnSelected(){
+    this.setState ( {showPlanetBox: true} )
+  }
+
   render() {
+    let pageBody;
+    if(this.state.showPlanetBox){
+      pageBody =   <PlanetBox
+      planets={this.state.planets}
+      onPlanetSelected={this.handlePlanetSelected}
+      />
+    }else{
+      pageBody = <PlanetData
+      planet={this.state.currentPlanet}
+      onReturnSelected={this.handleReturnSelected}
+      />
+    }
+
     return (
       <div>
-        <h1>Our Solar System</h1>
-        { this.state.showPlanetBox ?
-          <PlanetBox
-            planets={this.state.planets}
-            onPlanetSelected={this.handlePlanetSelected}
-          />
-        :
-        <PlanetData planet={this.state.currentPlanet}/>
-      }
+      <h1>Our Solar System</h1>
+      {pageBody}
       </div>
     );
   }
