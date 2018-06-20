@@ -1,13 +1,10 @@
 import React from 'react';
-// import PlanetSelector from './PlanetSelector.js';
 
 const PlanetBox = (props) => {
 
 
   const planetInfo = props.planets.map((planet, index) =>{
-    // const planetIndex = index
     const imgID =  `/images/${planet.id}.jpg`
-
 
     function handleChange(event){
       props.onPlanetSelected(event.currentTarget.getAttribute('value'));

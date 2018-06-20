@@ -28,10 +28,7 @@ class SolarSystem extends Component {
 
   handlePlanetSelected(planetId){
     const selectedPlanet = this.state.planets[planetId - 1]
-    // console.log('index', [index]);
     this.setState ( {currentPlanet: selectedPlanet, showPlanetBox: false} )
-    // console.log(planetId);
-    // console.log(selectedPlanet);
   }
 
   handleReturnSelected(){
