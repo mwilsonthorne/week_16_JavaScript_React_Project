@@ -29,7 +29,7 @@ const PlanetData = (props) => {
 
         <button onClick={handleReturn} type ="submit"> Return to Solar System </button>
 
-        <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" className="contol-bar" >
+        <Player src={props.planetURL} className="contol-bar" >
              <ControlBar autoHide={false}/>
         </Player>
 

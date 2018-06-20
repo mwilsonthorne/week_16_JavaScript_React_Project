@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PlanetBox from '../component/PlanetBox.js';
 import PlanetData from '../component/PlanetData.js';
+import PlanetURL from '../component/PlanetURL.js';
 
 class SolarSystem extends Component {
 
@@ -8,6 +9,7 @@ class SolarSystem extends Component {
     super(props);
     this.state = {
       planets: [],
+      planetURL: PlanetURL,
       currentPlanet: null,
       showPlanetBox: true
 
@@ -45,12 +47,13 @@ class SolarSystem extends Component {
     }else{
       pageBody = <PlanetData
       planet={this.state.currentPlanet}
+      planetURL= {this.state.planetURL[this.state.currentPlanet.id - 1]}
       onReturnSelected={this.handleReturnSelected}
       />
     }
 
     return (
-      <div>
+      <div className="title">
       <h1>Our Solar System</h1>
       {pageBody}
       </div>
