@@ -20,7 +20,7 @@ const PlanetBox = (props) => {
   })
 
   return (
-    <div>
+    <div className="planet-info">
       {planetInfo}
     </div>
   );
