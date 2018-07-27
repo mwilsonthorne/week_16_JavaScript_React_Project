@@ -21,7 +21,7 @@ class SolarSystem extends Component {
   }
 
   componentDidMount(){
-    const url = 'https://dry-plains-91502.herokuapp.com/planets';
+    const url = 'http://localhost:5000/planet-data';
     fetch(url)
     .then(res => res.json())
     .then(planetsData => this.setState({planets: planetsData}))
