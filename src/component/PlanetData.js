@@ -1,6 +1,6 @@
 import React from 'react';
-import { Player, ControlBar } from 'video-react';
-import "../../node_modules/video-react/dist/video-react.css";
+import ReactPlayer from 'react-player';
+// import "../../node_modules/video-react/dist/video-react.css";
 
 
 
@@ -29,9 +29,7 @@ const PlanetData = (props) => {
 
         <button onClick={handleReturn} type ="submit"> Return to Solar System </button>
 
-        <Player src={props.planetURL} className="contol-bar" >
-             <ControlBar autoHide={false}/>
-        </Player>
+        <ReactPlayer url={props.planetURL} playing />
 
       </div>
 
